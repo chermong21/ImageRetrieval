@@ -90,18 +90,3 @@ class GoogleImageSearcher(object):
         for imgurl in img_urls:
             download(imgurl, save_dir=save_dir)
             
-            
-    
-def main():
-    save_dir = r'github'
-    i = 0
-    while True:
-        downloader = GoogleImageSearcher('github', i*100)
-        downloader.download_images(save_dir)
-        if downloader.IS_OVER:
-            break
-        i+=1
-    
-    
-if __name__ == '__main__':
-    main()
